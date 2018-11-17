@@ -20,7 +20,7 @@ import MintUI from 'mint-ui'
 
 import 'mint-ui/lib/style.css'
 //导入mui
-import '../lib/mui/css/mui.min.css'
+import './lib/mui/css/mui.min.css'
 
 
 //导入bootstrap
