@@ -11,6 +11,13 @@ import router from './router.js'
 Vue.use(VueRouter)
 
 
+
+//导入axios
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
+
 //引入媒体查询css
 
 import './css/index.css'
@@ -21,7 +28,6 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 //导入mui
 import './lib/mui/css/mui.min.css'
-
 
 //导入bootstrap
 //
@@ -50,8 +56,12 @@ import VueRouter from 'vue-router'
 
 
 // });
+// 
+// 
+
 const vm = new Vue({
 	el: "#app",
+	// store,
 	render: c => c(app), // render 会把el指定容器中所有的内容都清空，覆盖
 	router // 将路由挂在view上
 })

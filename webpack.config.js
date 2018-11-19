@@ -35,7 +35,7 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			}, //配置.css模块的第三方
 			{
-				test: /\.(jpg|png|gif)$/,
+				test: /\.(jpeg|jpg|png|gif)$/,
 				use: 'url-loader?limit=7633'
 			},
 			//limit 给定的值是图片的大小
@@ -51,10 +51,7 @@ module.exports = {
 				test: /\.(ttf|eot|svg|woff|woff2)$/,
 				use: 'url-loader'
 			}, //处理字体
-			{
-				test: /\.(png|jpg|gif|ttf)$/,
-				use: 'url-loader'
-			}
+
 
 		]
 	},

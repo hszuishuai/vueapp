@@ -3,6 +3,9 @@ import home from './components/home.vue'
 import member from './components/member.vue'
 import serach from './components/serach.vue'
 import shopcart from './components/shopcart.vue'
+import newlist from './components/new/newlist.vue'
+import newinfo from './components/new/newinfo.vue'
+
 
 Vue.use(VueRouter)
 
@@ -20,19 +23,30 @@ export default new VueRouter({
 
 		}
 	},
-	router: [{
-		path: '/home',
-		component: 'home'
-	}, {
-		path: '/member',
-		component: 'member'
-	}, {
-		path: '/serach',
-		component: 'serach'
-	}, {
-		path: '/shopcart',
-		component: 'shopcart'
-	}, ]
+	routes: [{
+			path: '/',
+			redirect: '/home'
+		}, {
+			path: '/home',
+			component: home
+		}, {
+			path: '/member',
+			component: member
+		}, {
+			path: '/serach',
+			component: serach
+		}, {
+			path: '/shopcart',
+			component: shopcart
+		}, {
+			path: '/home/newlist',
+			component: newlist
+		}, {
+			path: '/home/newinfo/:id',
+			component: newinfo
+		},
+
+	]
 
 
 })

@@ -6,14 +6,15 @@
 <mt-header fixed title="固定在顶部"></mt-header>
 
 <!-- 中间是router-view区域-->
-
+<transition>
 <router-view></router-view>
+</transition>
 
 
 	
 <!-- 底部Tabber区域 -->
 <nav class="mui-bar mui-bar-tab">
-			<router-link class="mui-tab-item mui-active" to="/home">
+			<router-link class="mui-tab-item " to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</router-link>
@@ -47,7 +48,8 @@ export default{
 	
 	methods:{
 	
-		}
+		},
+	linkExactActiveClass:'mui-active'
 		
 };
 	
@@ -55,6 +57,23 @@ export default{
 <style scoped>
 .top{
 	padding-top: 40px;
+	overflow-x: hidden;
+	padding-bottom: 50px;
+
 }
+.v-enter{
+	opacity: 0;
+	transform:translateX(100%);
+}
+.v-leave-to{
+	opacity: 0;
+	transform:translateX(-100%);
+	position: absolute;
+}
+.v-enter-active,
+.v-leave-active{
+	transition: all 0.5s ease;
+}
+
 
 </style>
