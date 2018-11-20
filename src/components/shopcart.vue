@@ -5,8 +5,13 @@
 </template>
 
 <script type="text/javascript">
+export default{
+	created(){
+		this.$store.state.showNav=true;
+	}
+}
 	
 </script>
-<style type="text/css" scoped>
+<style  scoped>
 	
 </style>

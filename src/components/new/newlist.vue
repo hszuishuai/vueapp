@@ -43,7 +43,8 @@ export default{
 				
 				 // console.log(this.newlist);
 
-        		})
+        		});
+        	this.$store.state.showNav=true;
 
         },
         methods:{

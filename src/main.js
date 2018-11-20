@@ -1,6 +1,7 @@
 //在webpack 中尝试使用Vue
 //
 import Vue from 'vue'
+import store from './store/index.js'
 
 // import Vue from '../node_modules/vue/dist/vue.js'
 // 在node_modules 中根据包名，找到对应的vue文件夹
@@ -33,6 +34,13 @@ import './lib/mui/css/mui.min.css'
 //
 import 'bootstrap/dist/css/bootstrap.css'
 
+//导入滑动条插件
+// import LyTab from 'ly-tab'
+
+// Vue.use(LyTab)
+
+
+
 //把所有的组件，注册为全局组件
 
 Vue.use(MintUI)
@@ -61,7 +69,7 @@ import VueRouter from 'vue-router'
 
 const vm = new Vue({
 	el: "#app",
-	// store,
+	store,
 	render: c => c(app), // render 会把el指定容器中所有的内容都清空，覆盖
 	router // 将路由挂在view上
 })

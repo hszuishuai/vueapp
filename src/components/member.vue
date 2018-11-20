@@ -1,12 +1,21 @@
 <template>
 
-	<div><h2>22222</h2></div>
+	<div id='member'><h2>22222</h2></div>
 
 </template>
 
 <script type="text/javascript">
+export default{
+	created(){
+		this.$store.state.showNav=true;
+	}
+}
 	
 </script>
-<style type="text/css" scoped>
+<style scoped>
+#member{
+
+
+}
 	
 </style>

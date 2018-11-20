@@ -5,7 +5,8 @@ import serach from './components/serach.vue'
 import shopcart from './components/shopcart.vue'
 import newlist from './components/new/newlist.vue'
 import newinfo from './components/new/newinfo.vue'
-
+import photolist from './components/photos/photolist.vue'
+import shoplist from './components/shop/shoplist.vue'
 
 Vue.use(VueRouter)
 
@@ -25,7 +26,12 @@ export default new VueRouter({
 	},
 	routes: [{
 			path: '/',
-			redirect: '/home'
+			redirect: '/home',
+			meta: {
+				// 路由层级，数值越大层级越深，以此决定转场动画的前进和后退 大于前进，小于后退
+				index: 0,
+				showFooter: true
+			}
 		}, {
 			path: '/home',
 			component: home
@@ -44,6 +50,12 @@ export default new VueRouter({
 		}, {
 			path: '/home/newinfo/:id',
 			component: newinfo
+		}, {
+			path: '/home/photolist',
+			component: photolist
+		}, {
+			path: '/home/shoplist',
+			component: shoplist
 		},
 
 	]

@@ -10,13 +10,17 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
 		            	<router-link to="/home/newlist">
 		                    <span class="mui-icon mui-icon-home"></span>
-		                    <div class="mui-media-body">新闻链接</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
-		                    <div class="mui-media-body">Email</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">新闻简讯</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		            	<router-link to="/home/photolist">
+		                    <span class="mui-icon mui-icon-email"></span>
+		                    <div class="mui-media-body">视频分享</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		            	<router-link to="/home/shoplist">
 		                    <span class="mui-icon mui-icon-chatbubble"></span>
-		                    <div class="mui-media-body">Chat</div></a></li>
+		                    <div class="mui-media-body">商城</div>
+		                </router-link>
+		                </li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <span class="mui-icon mui-icon-location"></span>
 		                    <div class="mui-media-body">location</div></a></li>
@@ -44,7 +48,8 @@ export default {
 		};
 	},
 	created(){
-		this.getLunbo()
+		this.getLunbo();
+		 this.$store.state.showNav=true;
 	},
 	methods:{
 		getLunbo()
@@ -72,5 +77,9 @@ export default {
 	#home ul li{
 		border:none;
 	}
+	#home{
+		height:500px;
+	   
+    }
 
 </style>
